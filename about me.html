@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+
+    <!-- Import Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <style>
+        /* General Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            color: #f4f4f4;
+            background: linear-gradient(135deg, #333, #1a1a1a);
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 3rem;
+            background: rgba(0, 0, 0, 0.85);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar .logo {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar ul li a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .navbar ul li a:hover,
+        .navbar ul li .active {
+            background: #e67e22;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        /* Background Video */
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(50%);
+        }
+
+        /* About Section */
+        .about {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem 2rem;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .about h1 {
+            font-size: 42px;
+            color: #ffffff;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .about-info {
+            font-size: 18px;
+            color: #f4f4f4;
+            max-width: 900px;
+            margin-bottom: 2rem;
+        }
+
+        .bio-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3rem;
+            max-width: 1200px;
+            margin-top: 2rem;
+        }
+
+        .bio-card {
+            width: 300px;
+            background: rgba(0, 0, 0, 0.85);
+            border: 2px solid #e67e22;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .bio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        .bio-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .bio-card h3 {
+            font-size: 24px;
+            color: #e67e22;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .bio-card p {
+            font-size: 16px;
+            color: #f4f4f4;
+            padding: 0 1rem 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .bio-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .bio-card {
+                width: 90%;
+            }
+        }
+
+        /* Footer Styling */
+        footer {
+            background: rgba(0, 0, 0, 0.85);
+            color: #f4f4f4;
+            padding: 2rem 3rem;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .social-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links li a {
+            color: #f4f4f4;
+            font-size: 24px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="logo">Danish</a>
+        <ul>
+            <li><a href="Danish.html">Home</a></li>
+            <li><a href="about me.html" class="active">About</a></li>
+            <li><a href="hobby.html">Hobby</a></li>
+            <li><a href="achievement.html">Achievement</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <!-- Background Video -->
+    <video autoplay muted loop class="background-video">
+        <source src="hara.mp4" type="video/mp4">
+    </video>
+
+    <!-- About Section -->
+    <section class="about">
+        <h1>About</h1>
+        <div class="about-info">
+            <p>I am the eldest sibling in my family, and I am currently pursuing my education in accounting at Politeknik Kuching. I am an active person who enjoys trying new things in life, and I participate in road runs to stay fit and active.</p>
+        </div>
+
+        <!-- Bio Cards -->
+        <div class="bio-container">
+            <div class="bio-card">
+                <img src="child.jpg" alt="Family">
+                <h3>Family</h3>
+                <p>"Being the eldest in my family, I hold a lot of responsibilities and enjoy spending time with my loved ones. I strive to set a good example for my younger siblings, guiding them whenever they need support. Spending quality time with my family, whether through simple conversations, shared meals, or fun outings, strengthens our bond and reminds me of the importance of cherishing these moments together."</p>
+            </div>
+
+            <div class="bio-card">
+                <img src="poli.jpg" alt="Education">
+                <h3>Education</h3>
+                <p>Currently, I am studying accounting at Politeknik Kuching and am working hard to achieve my goals.</p>
+                <p>Education History:</p>
+                <p>SK Rakyat Bolhassan (2011)</p>
+                <p>SMK St Joseph (2017)</p>
+                <p>Politeknik Kuching (2022)</p>
+            </div>
+
+            <div class="bio-card">
+                <img src="fitness.jpg" alt="Fitness">
+                <h3>Fitness</h3>
+                <p>"I believe in staying active, and I enjoy participating in road runs to maintain my fitness level. Road running not only helps me stay in shape but also allows me to clear my mind and challenge myself with every new distance."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Danish Irfan. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="#" target="_blank"><i class="bx bxl-facebook"></i></a></li>
+                <li><a href="#" target="_blank"><i class="bx bxl-twitter"></i></a></li>
+                <li><a href="#" target="_blank"><i class="bx bxl-instagram"></i></a></li>
+                <li><a href="#" target="_blank"><i class="bx bxl-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>
